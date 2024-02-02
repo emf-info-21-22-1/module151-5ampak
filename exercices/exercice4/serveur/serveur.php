@@ -1,5 +1,5 @@
 <?php
-			/* header("Access-Control-Allow-Origin: http://localhost:8081 *");*/
+			/* header("Access-Control-Allow-Origin: http://localhost:8081 '*");*/
 			echo '<equipes>';
 			echo '<equipe><id>3</id><nom>SC Bern</nom></equipe>';
 			echo '<equipe><id>4</id><nom>Fribourg-Gottéron</nom></equipe>';
