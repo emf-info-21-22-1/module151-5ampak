@@ -12,8 +12,12 @@
         <td>Club</td>
       </tr>
       <?php
-        require('ctrl.php');
-        $equipe = getEquipes();
+        include_once('ctrl.php');
+        //instance
+        $ctrl = new ctrl();
+        //met le résultat
+        $equipe = $ctrl->getEquipes();
+
         $num = 1;
 
       foreach($equipe as $equip) {
