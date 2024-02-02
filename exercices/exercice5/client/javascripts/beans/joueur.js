@@ -19,6 +19,23 @@ Joueur.prototype.setNom = function(nom) {
 };
 
 /**
+ * Setter pour le pk de l'équipe
+ * @param Integer pk
+ */
+Joueur.prototype.setPk = function(pk) {
+  this.pk = pk;
+};
+
+/**
+ * Retourne la pk de l'équipe
+ * @returns La pk de l'équipe
+ */
+Joueur.prototype.getPk = function () {
+  return this.pk;
+};
+
+
+/**
  * Setter pour le nombre de points du joueur
  * @param int points
  * @returns {undefined}
