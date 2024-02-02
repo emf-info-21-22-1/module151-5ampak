@@ -30,7 +30,7 @@ function chargerTeamSuccess(data, text, jqXHR) {
  * @param {type} jqXHR
  */
 function chargerPlayerSuccess(data, text, jqXHR) {
-    // Appelé lorsque la liste des joueurs est reçue kk
+    // Appelé lorsque la liste des joueurs est reçue points
     var cmbJoueurs = document.getElementById("cmbJoueurs");
     // A COMPLETER!!! selon la logique suivante:
     // cmbJoueurs.options[cmbJoueurs.options.length] = new Option(<ce qui sera affiché>, <la valeur de la cellule>));
