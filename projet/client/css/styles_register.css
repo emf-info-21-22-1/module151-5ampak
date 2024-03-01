@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    text-align: left;
+    max-width: 400px; /* Définir une largeur maximale pour le conteneur */
+    margin: auto; /* Centrer le conteneur horizontalement */
+    padding: 20px; /* Ajouter un peu d'espace intérieur */
+}
+
+h2 {
+    margin: 0;
+    margin-bottom: 10px; 
+}
+
+p {
+    margin-top: 0; /* Réinitialiser la marge en haut du paragraphe */
+}
+
+label { 
+    margin-bottom: 10px; /* Réduire l'espace sous le label */
+    display: block; /* Assure que les labels prennent toute la largeur disponible */
+}
+
+.register-container {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px #0000001a;
+    border: 1px solid #ccc; 
+}
+
+.form-group {
+    margin-bottom: 20px; /* Ajouter un peu d'espace entre les groupes de formulaire */
+}
+
+.form-group label {
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: calc(100% - 16px); /* Ajuster la largeur de l'entrée pour compenser le padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Assure que la largeur inclut le padding et la bordure */
+}
+
+hr {
+    margin-top: 20px; /* Ajouter un peu d'espace au-dessus et en dessous de la ligne */
+    margin-bottom: 20px;
+    border: 0; /* Réinitialiser les styles de la ligne */
+    border-top: 1px solid #ccc; /* Ajouter une bordure supérieure */
+}
+
+p:last-child {
+    margin-bottom: 0; /* Ne pas ajouter de marge en bas du dernier paragraphe */
+}
+
+
+
+button {
+    width: 40%;
+    padding: 5px;
+    background-color: #8cdb96;
+    color: #000000;
+    border: 1px solid #c5c5c5; 
+    border-radius: 12px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45d6d6;
+}

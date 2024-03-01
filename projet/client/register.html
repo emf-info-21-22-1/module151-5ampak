@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/styles_register.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h2>Join planning World</h2>
+            <p>The best way to organize your project with your team.</p>
+        </div>
+        <div class="register-container">
+            <label>Create your personal account!</label>
+            <br>
+            <form id="registrationForm" action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirm Password</label>
+                    <input type="password" id="passwordVerif" name="password" required>
+                </div>
+                <hr>
+                <p>By clicking on "Create account" below, you are agreeing to the Terms of Service and the Privacy policy.</p>
+                <hr>
+                <button id="submit" type="submit">Create an account</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="javascript/helpers/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="javascript/ctrl_enregistrement.js"></script>
+</body>
+</html>

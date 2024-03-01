@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planning World</title>
+  <link rel="stylesheet" href="css/styles_planning.css">
+</head>
+<body>
+  <div class="header">
+    <img src="your-image.jpg" alt="Header Image">
+    <div class="title">
+      <h1>Planning World</h1>
+      <p>You can now see all the projects you are participating in.</p>
+    </div>
+    <button id="logout" class="logout-btn">Logout</button>
+  </div>
+  <hr>
+  <div class="menu">
+    <div class="menu-controls">
+      <select name="projects" id="projects-dropdown">
+        <option value="project">Project</option>
+        <!-- Add options for projects here -->
+      </select>
+      <button id="add-task-btn">Add New Task</button>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="block" id="Todo-Block">
+      <h2>TODO</h2>
+    </div>
+    <div class="block" id="In-Progress">
+      <h2>In Progress</h2>
+    </div>
+    <div class="block" id="Done">
+      <h2>Done</h2>
+    </div>
+    <div class="block" id="Validate">
+      <h2>Validate</h2>
+    </div>
+  </div>
+
+  <script src="javascript/block.js"></script>
+  <script type="text/javascript" src="javascript/helpers/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="javascript/ctrl_planning.js"></script>
+</body>
+</html>
