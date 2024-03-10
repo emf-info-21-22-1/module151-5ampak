@@ -8,5 +8,5 @@ Le projet est un gestionnaire de planning, vous pouvez créé des projets et des
 
 ### Info de test
 - Pour les tests de l'application en tant qu'administrateur, un utilisateur est disponible.
-Username : **admin test**
+Username : **admin_test**
 Password : **admin**
