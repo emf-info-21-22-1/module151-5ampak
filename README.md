@@ -1,10 +1,10 @@
 # Projet
 Repository du projet personnel du module 151
 
-## Titre du projet
+## Mon site web se trouve sur l'url suivant : https://paccauds.emf-informatique.ch/151/client/connexion.html
 
 ### Description du projet
-Votre descriptif du cahier des charges ici
+Le projet est un gestionnaire de planning, vous pouvez crée des projets et des tâches, pour voir à qu'elle point une tâche est avancé, vous pouvez déplacer les tâches dans le bonne état.
 
 ### Arborescence
 - L'analyse et les différents tests technos sont effectués dans /exercices
