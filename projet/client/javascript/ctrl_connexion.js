@@ -10,7 +10,9 @@ $.getScript("javascript/service/service_http.js", function () {
 
 $(document).ready(function () {
     $("#submitCon").click(function (event) {
-        event.preventDefault(); // pour afficher les echos / permission
+        event.preventDefault();
+
+        //injection html ?
 
         // get data
         console.log("Button login pressed");
@@ -34,25 +36,21 @@ function loginUser(username, password) {
     // Appel de la fonction AJAX pour se connecter
     connexionUserAjax(username, password, function (response) {
         // Callback de succès
-        console.log(response);
 
         // Récupération des propriétés de la réponse JSON
-        var success = response.success;
-        var message = response.message;
         var userLogin = response["Userlogin"];
         var userPK = response["UserPK"];
+        var userAdmin = response["IsAdmin"];
+        
+            alert("Connexion réussis avec succès : " + userLogin);
 
-        if (success) {
-            alert("Utilisateur connecté avec succès : " + userLogin);
             sessionStorage.setItem('username', userLogin);
             sessionStorage.setItem('PKuser', userPK);
+            sessionStorage.setItem('IsAdmin', userAdmin);
             // Redirigez l'utilisateur vers la page planning.html ou effectuez d'autres actions nécessaires
             window.location.href = "planning.html";
-        } else {
-            alert("La connexion a échoué : " + message);
-        }
+        
     }, function (error) {
-
         alert("Login ou mot de passe incorrect");
     });
 }

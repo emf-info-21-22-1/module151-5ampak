@@ -13,6 +13,7 @@ $(document).ready(function() {
     $("#submit").click(function(event) {
         event.preventDefault(); // pour afficher les echos / permission
         
+        //injection sql ?
         // get data
         console.log("Button register pressed");
         
@@ -46,7 +47,7 @@ function createUser(username, password){
     
     createUserAjax(username, password, function(response) {
         // Callback de succès
-       alert("Utilisateur créé avec succès :", response);
+       alert("Utilisateur crée avec succès !");
     }, function(error) {
         // Callback d'erreur
         alert("User already exist !");

@@ -6,10 +6,13 @@ class LoginManager
 {
 
   private $manager;
+  private $session;
 
   public function __construct()
   {
     $this->manager = new LoginDBManager();
+
+    $this->session = SessionManager::getInstance();
   }
 
   public function createUser($username, $password)
@@ -20,39 +23,38 @@ class LoginManager
 
   public function loginUser($username, $password)
   {
-      // Crée instance
-      $session = SessionManager::getInstance(); 
 
-          $jsonString = $this->manager->loginUser($username, $password);
-          
-          // Décoder la chaîne JSON
-          $data = json_decode($jsonString, true);
 
-          // Récupérer la valeur bool de la clé 'success'
-          $success = $data['success'];
+    $jsonString = $this->manager->loginUser($username, $password);
+    //don't crée session when no logged
+    $data = json_decode($jsonString, true);
 
-          if ($success) {
-              // Crée instance + définit la variable de session
-              $session->set('username', $username);
-              //sessionStor.setItem('username', $$username);
-              echo($jsonString);
-          }
+    if ($data['connexionPossible']) {
+      // Crée instance + définit la variable de session (USER UNIQUE !)
+      $this->session->set('username', $username);
+    }
+
+
+    echo ($jsonString);
+
   }
 
-  public function logoutUser($username){
-    $session = SessionManager::getInstance();
-    
-    $session->destroy();
-    
+  public function logoutUser($username)
+  {
 
-   // if (!$session->has('username')) {
-      $jsonString = $this->manager->logoutUser(true,$username);
-      echo($jsonString);
-    //}else{
-     // $jsonString = $this->manager->logoutUser(false);
-      //echo($jsonString);
-    //}
-    
+    $result = "";
+
+    if ($this->session->get('username')) {
+
+      $this->session->destroy();
+      $jsonString = $this->manager->logoutUser(true, $username);
+      $result = $jsonString;
+    } else {
+
+      $jsonString = $this->manager->logoutUser(false, $username);
+      $result = $jsonString;
+    }
+    echo $result;
   }
 }
 

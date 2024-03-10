@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,6 +8,7 @@ body {
   display: flex;
   align-items: center;
   padding: 20px;
+  background-color: #f0f0f0; /* Couleur de fond pour l'en-tête */
 }
 
 .header img {
@@ -31,7 +30,7 @@ body {
 
 .logout-btn {
   background-color: red;
-  color: rgb(0, 0, 0);
+  color: white; /* Texte en blanc */
   border: 2px solid black;
   padding: 10px 20px;
   border-radius: 5px;
@@ -50,7 +49,7 @@ body {
 
 #projects-dropdown {
   height: 41px;
-  color: rgb(0, 0, 0);
+  color: black; /* Texte en noir */
   border: 2px solid black;
   background-color: #ffffff;
   padding: 10px 30px;
@@ -58,52 +57,65 @@ body {
 
 #add-task-btn {
   height: 41px;
-  color: rgb(0, 0, 0);
+  color: black; /* Texte en noir */
   border: 2px solid black;
   border-left: 0px solid black;
   background-color: #ffffff;
   padding: 10px 30px;
 }
 
+
+#add-new-projet {
+  margin-left: 10px;
+  height: 41px;
+  color: black; /* Texte en noir */
+  border: 2px solid black;
+  border-left: 2px solid black;
+  background-color: #dfdede;
+  padding: 10px 30px;
+}
+
 .container {
   display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Permet à la ligne de contenir plusieurs blocs */
+  gap: 20px;
   padding: 10px;
 }
 
 .block {
   flex: 1;
   border: 2px solid black;
-  border-right: 0px solid black;
-  padding: 10px;
-}
-.block:last-child {
-  border-right: 2px solid black; /* Applique une bordure à droite uniquement sur le dernier bloc */
+  padding: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-.block {
-  border: 2px solid black;
-  padding: 10px;
-  margin-bottom: 20px; /* Add margin-bottom to create space between each block */
-}
-
-/* Remove border-right from all blocks */
-.block {
-  border-right: none;
-}
-
-/* Add border-right to all blocks except the last one */
+/* Applique une marge en bas à tous les blocs sauf le dernier */
 .block:not(:last-child) {
-  border-right: 2px solid black;
+  margin-bottom: 20px;
+}
+
+.menu-controls {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+
+.input-group {
+  height: 27px; /* Ajustement de la hauteur */
+  color: black; /* Texte en noir */
+  border: 2px solid black;
+  border-left: 0px solid black;
+  background-color: #f0f0f0;
+  padding: 5px 10px; /* Ajustement du padding */
+}
+
+.input-group label {
+  margin-right: 5px; /* Ajoute un espacement entre le label et le champ de texte */
+}
+
+.input-group input {
+  height: 100%; /* Ajustement de la hauteur pour remplir complètement le conteneur */
+  padding: 0 5px; /* Ajustement du padding */
+  border: 1px solid black; /* Ajout de la bordure */
+  background-color: #ffffff;
 }

@@ -1,7 +1,10 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Origin: http://localhost:8080');
+//header('Access-Control-Allow-Origin: *');
+//header('Access-Control-Allow-Origin: http://localhost:8080');
+header('Access-Control-Allow-Origin: https://paccauds.emf-informatique.ch/151/client');
 header('Access-Control-Allow-Credentials: true');
+
+
 //connexion ctrl
 include_once('ctrl/LoginManager.php');
 
